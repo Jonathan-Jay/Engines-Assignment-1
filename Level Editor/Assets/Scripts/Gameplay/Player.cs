@@ -109,9 +109,7 @@ public class Player : MonoBehaviour
 
 
 		//reset velocity
-		movement.y = rb.velocity.y;
-
-		movement.x = rb.velocity.x;
+		movement = rb.velocity;
 		//deccel early
 		if (grounded)
 			movement.x = Mathf.Lerp(movement.x, 0, Time.deltaTime * deccelSpeed);
